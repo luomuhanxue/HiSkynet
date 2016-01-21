@@ -13,7 +13,7 @@ skynet.init(function ( )
 end)
 
 skynet.start(function ( )
-	skynet.dispatch("lua", svc.handler)
+	skynet.dispatch("lua", svc.handle)
 	
 	--方式一，按句柄发消息
 	skynet.send(svc.master, "lua", "SLAVE", skynet.getenv "harbor")
